@@ -15,6 +15,7 @@ import subcategoryRoutes from './server/routes/subcategoryRoutes';
 const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(express.static('public/apidoc'))
 const port = process.env.PORT || 8001;
 
 
@@ -31,7 +32,10 @@ app.use('/api/v1/store', storeRoutes);
 app.use('/api/v1/user', userRoutes);
 app.use('/api/v1/subcategory',subcategoryRoutes);
 
-
+console.log("__dirname"+root);
+app.use('/apidoc', function(req, res) {
+  res.sendFile(root+'/public/apidoc/index.html');
+});
 app.get('*', (req, res) => res.status(200).send({
    message: 'Welcome to DoorDaa API.'
 }));

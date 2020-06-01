@@ -5,7 +5,8 @@
   "scripts": {
     "start": "nodemon --exec babel-node ./api/index.js",
     "dev": "nodemon --exec babel-node ./api/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rm -rf ./build && babel -d ./build ./api -s"
   },
   "keywords": [
     "example",

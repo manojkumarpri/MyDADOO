@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import SubCategoryController from '../controllers/SubCategoryController';
+import SubCategoryController from '../controllers/subcategoryController';
 const authJwt = require('./verifyJwtToken');
 const verfifysignup = require('./verifysignup');
 const router = Router();

@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import AdvertisementController from '../controllers/AdvertisementController';
+import AdvertisementController from '../controllers/advertisementController';
 const authJwt = require('./verifyJwtToken');
 
 const router = Router();

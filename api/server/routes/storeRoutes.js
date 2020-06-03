@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import StoreController from '../controllers/StoreController';
+import StoreController from '../controllers/storeController';
 const authJwt = require('./verifyJwtToken');
 const router = Router();
 /**

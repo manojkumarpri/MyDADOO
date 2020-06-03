@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import InvoiceController from '../controllers/InvoiceController';
+import InvoiceController from '../controllers/invoiceController';
 const authJwt = require('./verifyJwtToken');
 const router = Router();
 

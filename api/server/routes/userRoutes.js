@@ -106,6 +106,7 @@ router.post('/signin',UserController.signin);
  * @apiName AddUser information
  * @apiGroup User
  *
+  *  @apiHeader {String} Content-Type application/x-www-form-urlencoded.
 
 
  *

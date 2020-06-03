@@ -1,4 +1,4 @@
-import UserService from '../services/UserService';
+import UserService from '../services/userService';
 import Util from '../utils/Utils';
 var jwt = require('jsonwebtoken');
 const util = new Util();

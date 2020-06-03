@@ -1,4 +1,4 @@
-import AddressService from '../services/AddressService';
+import AddressService from '../services/addressService';
 import Util from '../utils/Utils';
 
 const util = new Util();

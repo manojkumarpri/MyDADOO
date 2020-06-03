@@ -1,4 +1,4 @@
-import AdvertisementService from '../services/AdvertisementService';
+import AdvertisementService from '../services/advertisementService';
 import Util from '../utils/Utils';
 
 const util = new Util();

@@ -1,4 +1,4 @@
-import StoreService from '../services/StoreService';
+import StoreService from '../services/storeService';
 import Util from '../utils/Utils';
 
 const util = new Util();

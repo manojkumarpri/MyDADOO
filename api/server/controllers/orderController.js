@@ -1,4 +1,4 @@
-import OrderService from '../services/OrderService';
+import OrderService from '../services/orderService';
 import Util from '../utils/Utils';
 
 const util = new Util();

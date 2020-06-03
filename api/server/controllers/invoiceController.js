@@ -1,4 +1,4 @@
-import InvoiceService from '../services/InvoiceService';
+import InvoiceService from '../services/invoiceService';
 import Util from '../utils/Utils';
 
 const util = new Util();

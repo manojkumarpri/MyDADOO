@@ -1,4 +1,4 @@
-import CartService from '../services/CartService';
+import CartService from '../services/cartService';
 import Util from '../utils/Utils';
 
 const util = new Util();

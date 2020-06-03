@@ -1,4 +1,4 @@
-import SubCategoryService from '../services/SubCategoryService';
+import SubCategoryService from '../services/subcategoryService';
 import Util from '../utils/Utils';
 
 const util = new Util();

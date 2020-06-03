@@ -10,6 +10,7 @@ import productRoutes from './server/routes/productRoutes';
 import storeRoutes from './server/routes/storeRoutes';
 import userRoutes from './server/routes/userRoutes';
 import subcategoryRoutes from './server/routes/subcategoryRoutes';
+import root from '../root';
 
 
 const app = express();

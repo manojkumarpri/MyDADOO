@@ -1,6 +1,6 @@
 const jwt = require('jsonwebtoken');
 
-import UserController from '../controllers/UserController';
+import UserController from '../controllers/userController';
 
 
  

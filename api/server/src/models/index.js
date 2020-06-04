@@ -36,7 +36,7 @@ if (config.environment === 'production') {
      config.database, config.username, config.password, config
   );
 }
-
+sequelize.sync();
 fs
   .readdirSync(__dirname)
   .filter((file) => {

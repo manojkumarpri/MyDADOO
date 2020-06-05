@@ -20,7 +20,7 @@ class CategoryService {
   static async updateCategory(id, updateCategory) {
     try {
       const CategoryToUpdate = await database.Category.findOne({
-        where: { id: Number(id) }
+        where: { categoryid: Number(id) }
       });
 
       if (CategoryToUpdate) {
@@ -52,7 +52,7 @@ class CategoryService {
 
       if (CategoryToDelete) {
         const deletedCategory = await database.Category.destroy({
-          where: { id: Number(id) }
+          where: { categoryid: Number(id) }
         });
         return deletedCategory;
       }

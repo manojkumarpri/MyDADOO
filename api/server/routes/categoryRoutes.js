@@ -1,6 +1,8 @@
 import { Router } from 'express';
 import CategoryController from '../controllers/categoryController';
 const authJwt = require('./verifyJwtToken');
+const authJwt2=require('./verifyJwtToken2');
+
 const router = Router();
 /**
  * @api {get} /category/ Request get all category information
@@ -71,7 +73,7 @@ const router = Router();
  *       "error": "categoryNotFound"
  *     }
  */
-router.get('/',[authJwt.verifyToken],CategoryController.getAllCategorys);
+router.get('/',[authJwt2.verifyToken2],CategoryController.getAllCategorys);
 /**
  * @api {post} /category/ add category information
  * @apiName Addcategory information

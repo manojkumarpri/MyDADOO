@@ -1,6 +1,8 @@
 import { Router } from 'express';
 import ProductController from '../controllers/productController';
 const authJwt = require('./verifyJwtToken');
+const authJwt2=require('./verifyJwtToken2');
+
 const router = Router();
 /**
  * @api {get} /product/ Request get all product information
@@ -55,7 +57,7 @@ const router = Router();
  *       "error": "productNotFound"
  *     }
  */
-router.get('/',[authJwt.verifyToken], ProductController.getAllProducts);
+router.get('/',[authJwt2.verifyToken2], ProductController.getAllProducts);
 /**
  * @api {post} /product/ add product information
  * @apiName Addproduct information

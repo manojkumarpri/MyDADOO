@@ -1,6 +1,8 @@
 import { Router } from 'express';
 import CartController from '../controllers/cartController';
 const authJwt = require('./verifyJwtToken');
+const authJwt2=require('./verifyJwtToken2');
+
 const router = Router();
 /**
  * @api {get} /cart/ Request get all cart information
@@ -78,7 +80,7 @@ const router = Router();
  *       "error": "cartNotFound"
  *     }
  */
-router.get('/',[authJwt.verifyToken], CartController.getAllCarts);
+router.get('/',[authJwt2.verifyToken2], CartController.getAllCarts);
 /**
  * @api {post} /cart/ add cart information
  * @apiName Addcart information

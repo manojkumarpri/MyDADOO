@@ -1,6 +1,8 @@
 import { Router } from 'express';
 import StoreController from '../controllers/storeController';
 const authJwt = require('./verifyJwtToken');
+const authJwt2=require('./verifyJwtToken2');
+
 const router = Router();
 /**
  * @api {get} /store/ Request get all store information
@@ -44,7 +46,7 @@ const router = Router();
  *       "error": "storeNotFound"
  *     }
  */
-router.get('/',[authJwt.verifyToken],StoreController.getAllStores);
+router.get('/',[authJwt2.verifyToken2],StoreController.getAllStores);
 /**
  * @api {post} /store/ add store information
  * @apiName Addstore information

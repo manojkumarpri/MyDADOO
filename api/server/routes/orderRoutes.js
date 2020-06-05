@@ -1,6 +1,8 @@
 import { Router } from 'express';
 import OrderController from '../controllers/orderController';
 const authJwt = require('./verifyJwtToken');
+const authJwt2=require('./verifyJwtToken2');
+
 const router = Router();
 /**
  * @api {get} /order/ Request get all order information
@@ -70,7 +72,7 @@ const router = Router();
  *       "error": "orderNotFound"
  *     }
  */
-router.get('/',[authJwt.verifyToken],OrderController.getAllOrders);
+router.get('/',[authJwt2.verifyToken2],OrderController.getAllOrders);
 /**
  * @api {post} /order/ add order information
  * @apiName Addorder information

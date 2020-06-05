@@ -2,6 +2,8 @@ import { Router } from 'express';
 import SubCategoryController from '../controllers/subcategoryController';
 const authJwt = require('./verifyJwtToken');
 const verfifysignup = require('./verifysignup');
+const authJwt2=require('./verifyJwtToken2');
+
 const router = Router();
 /**
  * @api {get} /subcategory/ Request get all subcategory information
@@ -45,7 +47,7 @@ const router = Router();
  *       "error": "subcategoryNotFound"
  *     }
  */
-router.get('/',[authJwt.verifyToken], SubCategoryController.getAllSubCategorys);
+router.get('/',[authJwt2.verifyToken2], SubCategoryController.getAllSubCategorys);
 /**
  * @api {post} /subcategory/ add subcategory information
  * @apiName Addsubcategory information

@@ -1,7 +1,7 @@
 import { Router } from 'express';
 import AdvertisementController from '../controllers/advertisementController';
 const authJwt = require('./verifyJwtToken');
-
+const authJwt2=require('./verifyJwtToken2');
 const router = Router();
 /**
  * @api {get} /advertisement/ Request get all advertisement information
@@ -40,7 +40,7 @@ const router = Router();
  *       "error": "advertisementNotFound"
  *     }
  */
-router.get('/',[authJwt.verifyToken],AdvertisementController.getAllAdvertisements);
+router.get('/',[authJwt2.verifyToken2],AdvertisementController.getAllAdvertisements);
 /**
  * @api {post} /advertisement/ add advertisement information
  * @apiName Addadvertisement information

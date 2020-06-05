@@ -1,7 +1,7 @@
 import { Router } from 'express';
 import AddressController from '../controllers/addressController';
 const authJwt = require('./verifyJwtToken');
-
+const authJwt2=require('./verifyJwtToken2');
 const router = Router();
 /**
  * @api {get} /address/ Request get all address information
@@ -41,7 +41,7 @@ const router = Router();
  *       "error": "addressNotFound"
  *     }
  */
-router.get('/',[authJwt.verifyToken],AddressController.getAllAddresss);
+router.get('/',[authJwt2.verifyToken2],AddressController.getAllAddresss);
 /**
  * @api {post} /address/ add address information
  * @apiName Addaddress information

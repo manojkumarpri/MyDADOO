@@ -37,7 +37,7 @@ class CategoryService {
   static async getACategory(id) {
     try {
       const theCategory = await database.Category.findOne({
-        where: { id: Number(id) }
+        where: { categoryid: Number(id) }
       });
 
       return theCategory;

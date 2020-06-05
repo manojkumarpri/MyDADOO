@@ -11,9 +11,11 @@ import storeRoutes from './server/routes/storeRoutes';
 import userRoutes from './server/routes/userRoutes';
 import subcategoryRoutes from './server/routes/subcategoryRoutes';
 import root from '../root';
+var cors = require('cors');
 
 
 const app = express();
+app.use(cors()); 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static('public/apidoc'))

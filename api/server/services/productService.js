@@ -36,8 +36,8 @@ class ProductService {
 
   static async getAProduct(id) {
     try {
-      const theProduct = await database.Product.findOne({
-        where: { id: Number(id) }
+      const theProduct = await database.Product.findAll({
+        where: { categoryid: Number(id) }
       });
 
       return theProduct;

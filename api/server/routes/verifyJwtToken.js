@@ -5,14 +5,14 @@ const jwt = require('jsonwebtoken');
  
 function verifyToken(req, res, next) {
   let token = req.headers['x-access-token'];
-  var requestType =req.headers['accept']; 
-  console.log("requestType",requestType)
+  var requestType =req.headers['Content-Type']; 
+  console.log("requestType",req.is('application/x-www-form-urlencoded'))
   if (!token){
     return res.status(403).send({ 
       auth: false, message: 'No token provided.' 
     });
   }
-  if(requestType=="application/x-www-form-urlencoded"){
+  if(req.is('application/x-www-form-urlencoded')){
  
   jwt.verify(token,process.env.SECRET_KEY, (err, decoded) => {
     if (err){

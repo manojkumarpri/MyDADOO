@@ -32,8 +32,8 @@ function verifyToken2(req, res, next) {
  
 
  
-const authJwt = {};
-authJwt.verifyToken = verifyToken;
+const authJwt2 = {};
+authJwt2.verifyToken2 = verifyToken2;
 
  
-module.exports = authJwt;
+module.exports = authJwt2;

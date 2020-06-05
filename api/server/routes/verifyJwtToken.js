@@ -5,7 +5,7 @@ const jwt = require('jsonwebtoken');
  
 function verifyToken(req, res, next) {
   let token = req.headers['x-access-token'];
-  var requestType =req.headers['Content-Type']; 
+  var requestType =req.headers['content-type']; 
   console.log('requestType in headers'+requestType);
   console.log("req header",req.headers);
   console.log("requestType",req.is('application/x-www-form-urlencoded'))
@@ -14,7 +14,7 @@ function verifyToken(req, res, next) {
       auth: false, message: 'No token provided.' 
     });
   }
-  if(req.is('application/x-www-form-urlencoded')){
+  if(requestType=='application/x-www-form-urlencoded'){
  
   jwt.verify(token,process.env.SECRET_KEY, (err, decoded) => {
     if (err){

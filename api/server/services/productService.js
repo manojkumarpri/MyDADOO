@@ -20,11 +20,11 @@ class ProductService {
   static async updateProduct(id, updateProduct) {
     try {
       const ProductToUpdate = await database.Product.findOne({
-        where: { id: Number(id) }
+        where: { productid: Number(id) }
       });
 
       if (ProductToUpdate) {
-        await database.Product.update(updateProduct, { where: { id: Number(id) } });
+        await database.Product.update(updateProduct, { where: { productid: Number(id) } });
 
         return updateProduct;
       }

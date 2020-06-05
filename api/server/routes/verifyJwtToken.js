@@ -7,6 +7,7 @@ function verifyToken(req, res, next) {
   let token = req.headers['x-access-token'];
   var requestType =req.headers['Content-Type']; 
   console.log('requestType in headers'+requestType);
+  console.log("req header",req.headers);
   console.log("requestType",req.is('application/x-www-form-urlencoded'))
   if (!token){
     return res.status(403).send({ 

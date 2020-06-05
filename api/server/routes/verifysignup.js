@@ -6,10 +6,9 @@ import UserController from '../controllers/userController';
  
 function verifyemail(req, res, next) {
  
-  var requestType = req.get('Content-Type');
-  console.log("requestType"+requestType)
+  console.log("requestType"+req.is('application/x-www-form-urlencoded'))
   
-  if(requestType=="application/x-www-form-urlencoded"){
+  if(req.is('application/x-www-form-urlencoded')){
    
     next();
   }
